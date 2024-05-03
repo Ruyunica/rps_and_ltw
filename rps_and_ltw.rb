@@ -25,6 +25,7 @@ class Rps_and_ltw
       puts "あなた：#{hands[rps_type_user]}を出しました"
       puts "相手：#{hands[rps_type_system]}を出しました"
 
+      @rps_result = rps_type_user - rps_type_system
       return rps_type_user, rps_type_system, counter # ユーザーと相手の値を戻り値として返す
 
     elsif rps_type_user == 3
@@ -58,7 +59,7 @@ class Rps_and_ltw
               if @rps_result == -1 || @rps_result == 2
                 puts "あなたの勝ち！"
                 exit
-              else
+              elsif @rps_result == 1 || @rps_result == -2
                 puts "相手の勝ち！"
                 exit
               end
