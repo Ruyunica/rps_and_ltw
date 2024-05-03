@@ -25,7 +25,7 @@ class Rps_and_ltw
       puts "あなた：#{hands[rps_type_user]}を出しました"
       puts "相手：#{hands[rps_type_system]}を出しました"
 
-      @rps_result = rps_type_user - rps_type_system
+      @rps_result = rps_type_user - rps_type_system #じゃんけんの結果を計算して格納
       return rps_type_user, rps_type_system, counter # ユーザーと相手の値を戻り値として返す
 
     elsif rps_type_user == 3
